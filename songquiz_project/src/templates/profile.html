@@ -1,0 +1,23 @@
+{% extends "navbar.html" %} {% block content %}
+<h1 class="modern-heading">
+  Welcome back {{username}}!
+</h1>
+
+<h1 class ="favorite-song">
+  Your favourite songs: 
+</h1>
+
+<div class="cards">
+  {%for i in range(length)%}
+  <a href="/song/{{content[i][0]}}">
+    <div class="card">
+      <img src="/static/images/image.png" class="image4" />
+      <div class="container">
+        <h4><b>Title: {{content[i][2]}}</b></h4>
+        <h5>Artist: {{content[i][1]}}</h5>
+      </div>
+    </div>
+  </a>
+  {%endfor%}
+</div>
+{% endblock content %}

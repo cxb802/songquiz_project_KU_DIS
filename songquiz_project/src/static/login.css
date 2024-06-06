@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to left top, #1c500d, #73af59) fixed;
+    color: rgba(255,255,255,0.8);
+    padding: 50px;
+}
+
+.login {
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.image {
+    height: 250px;
+    width: 320px;
+    image-rendering: pixelated;
+}
+
+.login-screen {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ff95;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.app-title {
+    margin-bottom: 20px;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.control-group {
+    margin-bottom: 10px;
+}
+
+input.login-field {
+    text-align: center;
+    background-color: #FFF;
+    border: 2px solid;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    width: 100%;
+    transition: border 0.5s;
+    border-radius: 5px;
+}
+
+input.login-field:focus {
+    border: 2px solid #10ea00;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    border: none;
+    background: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: none;
+    box-shadow: none;
+    transition: background 0.25s;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #00ff95;
+}
+
+.btn-primary:hover {
+    background-color: #10ea00;
+}
+
+.btn-secondary {
+    background-color: #25820d;
+}
+
+.btn-secondary:hover {
+    background-color: #10ea00;
+}
+
+.create-account {
+    margin-top: 20px;
+}
+
+.modern-heading {
+    font-size: 6em;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    margin: 20px 0;
+    padding: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .modern-heading:hover {
+    color: #00ff95;
+  }
+  

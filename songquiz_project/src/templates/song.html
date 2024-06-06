@@ -1,0 +1,54 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<div class="song-container">
+  <h1 class="modern-song-heading ">{{ song_data[1] }} - {{ song_data[3] }}</h1>
+  
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flashes">
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <!-- Lyrics Section -->
+  <div class="lyrics-section">
+    <h4>Lyrics</h4>
+    <p class="lyrics">{{ song_data[2] }}</p>
+  </div>
+  
+  <div class="details-container">
+    <!-- Artist Section -->
+    <div class="details-item">
+      <h4>Artist</h4>
+      <p class="detail">{{ song_data[1] }}</p>
+    </div>
+
+    <!-- Album Section -->
+    <div class="details-item">
+      <h4>Album</h4>
+      <p class="detail">{{ song_data[3] }}</p>
+    </div>
+  </div>
+  
+  <!-- Add to Favorites Section -->
+  <div class="favorites-section">
+    <form action="/add_to_favorites_song" method="post" class="favorites-form">
+      <input type="hidden" name="id" value="{{ song_data[4] }}">
+      <input type="hidden" name="Title" value="{{ song_data[3] }}">
+      <input type="hidden" name="Artist" value="{{ song_data[1] }}">
+      <button type="submit" class="favorites-button">Add To Favorites</button>
+      
+    </form>
+    <form action="/remove_favorites" method="post" class="favorites-form">
+      <input type="hidden" name="id" value="{{ song_data[4] }}">
+      <input type="hidden" name="Title" value="{{ song_data[3] }}">
+      <input type="hidden" name="Artist" value="{{ song_data[1] }}">
+      <button type="submit" class="favorites-button">Remove From Favorites</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}

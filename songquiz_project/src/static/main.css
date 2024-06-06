@@ -1,0 +1,489 @@
+.radio {
+  position: relative;
+  cursor: pointer;
+  padding: 10px; /* Increased padding */
+}
+.fake-radio {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #00ff95;
+  border-radius: 30px;
+  color: #00ff95;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Styling for the fake radio buttons when checked */
+input[type="submit"]:checked + .fake-radio {
+  background-color: #00ff95;
+  color: #fff;
+}
+
+/* Hover effect for the fake radio buttons */
+.fake-radio:hover {
+  background-color: #00ff95;
+  color: #fff;
+}
+
+/* Hide the original radio buttons */
+input[type="submit"] {
+  position: absolute;
+  left: -9999px;
+}
+
+ul { /* topbar */
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #25820d;
+}
+
+li {
+  float: left;
+}
+
+li a { /* topbar text */
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  color: #10ea00;
+}
+
+body { /* background */
+  background: #73af59;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-family: 'Roboto', sans-serif;
+}
+label { /* text */
+  font-size: 18px;
+  color: #ffffff;
+}
+#form {
+  width: 400px;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  font-size: 18px;
+  outline:none;
+  background: linear-gradient(to left top, #ffffff, #ffffff) fixed;
+  border: 4px solid #25820d;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 5px;
+  transition: all 0.5s;
+}
+#formNumber {
+width: 100px;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  font-size: 18px;
+  outline:none;
+  background: linear-gradient(to left top, #ffffff, #ffffff) fixed;
+  border: 4px solid #25820d;
+  color: rgba(255,255,255,0.8);
+  margin: 5px;
+  transition: all 0.5s;
+}
+
+#form:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border: 4px solid #10ea00;
+}
+#form:focus {
+  border: 4px solid #10ea00;
+}
+
+#button {
+  width: 125px;
+  font-family: 'Roboto', sans-serif;
+  padding: 11px;
+  font-size: 15px;
+  font-weight:bold;
+  margin: 5px;
+  outline:none;
+  background: linear-gradient(to left top, #ffffff, #ffffff) fixed;
+  border: 4px solid #25820d;
+  color: rgba(139, 138, 138, 0.8);
+}
+#buttonAdd {
+  width: 250px;
+  height: 125px;
+  font-family: 'Roboto', sans-serif;
+  padding: 11px;
+  font-size: 15px;
+  font-weight:bold;
+  margin: 5px;
+  outline:none;
+  background: linear-gradient(to left top, #ffffff, #ffffff) fixed;
+  border: 6px solid #25820d;
+  color: rgba(255,255,255,0.8);
+}
+#buttonAdd:hover {
+  border: 4px solid #10ea00;
+}
+
+#buttonAdd:focus {
+  border: 4px solid #10ea00;
+}
+
+#button:hover {
+  border: 4px solid #10ea00;
+}
+
+#button:focus {
+  border: 4px solid #10ea00;
+}
+p {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 6.5em;
+  color: #00ff95;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5em;
+  color: #ffffff;
+  text-align: center;
+}
+h3 {
+  font-size: 1.5em;
+  color: #ffffff;
+}
+h4 {
+    text-align: center;
+    color: #ffffff;
+}
+p.card-text {
+    font-size: 0.6em;
+    color: #ffffff;
+}
+h5 {
+  font-size: 0.8em;
+  color: #ffffff;
+}
+
+
+.contact {
+  display: flex;
+  flex-direction: column; /* Arrange contactUser elements vertically */
+  align-items: flex-start; /* Align items to the start of the container */
+  padding: 5rem 0 0 15rem; /* Maintain your existing padding */
+}
+
+.contactUser {
+  display: flex; /* Use flex to arrange image and text horizontally */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px; /* Space between contactUser elements */
+  height: 150px; /* Adjusted to match the image height */
+}
+
+.informationUser {
+  display: flex; /* Use flex to arrange image and text horizontally */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 50px; /* Space between contactUser elements */
+}
+
+.contactText {
+  margin-left: 15px; /* Space between image and text */
+  font-size: 2.2em; /* Adjust font size for readability */
+}
+
+.image2 {
+  width: 100px; /* Set width of the image */
+  height: 150px; /* Set height of the image */
+  object-fit: cover; /* Maintain aspect ratio and cover the element */
+  border-radius: 10px; /* Slight rounding of corners */
+}
+
+.queryform {
+  background-color: #25820d;
+  padding: 10px;
+  margin-top: 20px; /* Adjust spacing */
+}
+.querybox{
+  margin: auto auto;
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #25820d;
+}
+
+.tablecontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 4rem;
+  padding-top: 1rem;
+}
+.tableitem {
+  border: 4px solid #10ea00;
+  padding: 1rem;
+}
+.image {
+  height: 300px;
+  width: 300px;  
+  image-rendering: pixelated;
+}
+.imagebig {
+  height: 400px;
+  width: 400px;  
+  image-rendering: pixelated;
+}
+.imgdiv {
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Responsive grid */
+  grid-auto-rows: auto;
+  grid-gap: 0.9rem; /* Reduced gap */
+  justify-items: center; /* Center items within their columns */
+  justify-content: center; /* Center the grid within the container */
+}
+
+.card {
+  border: 2px solid #25820d;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 240px;
+  height: auto;
+  background: linear-gradient(145deg, #25820d, #73af59);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  border-color: #10ea00;
+}
+/* Add some padding inside the card container */
+.container {
+  background-color: #25820d;
+  padding: 2px 16px;
+  height: 146px;
+}
+
+.image4 {
+  /* Adjusted width for each image */
+  width: 100%; /* Make the image fill the container width */
+  height: auto; /* Auto height to maintain aspect ratio */
+  image-rendering: pixelated;
+}
+.album-name {
+  max-width: 200px;  /* Adjust the max-width as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.search-bar {
+  padding: 10px 20px;
+  border: 2px solid #00ff95;
+  border-radius: 30px; /* Adjusted border-radius */
+  color: #00ff95;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  flex: 1; /* Take remaining width */
+}
+
+.search-bar:focus {
+  border: 2px solid #10ea00; /* Green border when focused */
+}
+
+.search-button {
+  padding: 10px 20px;
+  border: 2px solid #00ff95;
+  border-radius: 30px; /* Adjusted border-radius */
+  color: #00ff95;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-left: 10px; /* Adjust spacing */
+}
+
+.search-button:hover {
+  border: 2px solid #10ea00; /* Green border when hovered */
+}
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #73af59;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.song-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #25820d;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.song-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.lyrics-section {
+  margin-bottom: 20px;
+  
+}
+
+.lyrics-section h4 {
+  font-size: 1.7em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  
+}
+
+.lyrics {
+  font-size: 1em;
+  color: #ffffff;
+  
+}
+
+.details-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.details-item {
+  width: 45%;
+}
+
+.details-item h4 {
+  font-size: 1.7em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.detail {
+  font-size: 1.2em;
+  color: #fff;
+  text-align: center;
+}
+
+.favorites-section {
+  text-align: center;
+}
+
+.favorites-form {
+  display: inline-block;
+}
+
+.favorites-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #00ff95;
+  border-radius: 30px;
+  color: #00ff95;
+  font-weight: bold;
+  background-color: #25820d;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.favorites-button:hover {
+  background-color: #00ff95;
+  color: #fff;
+}
+
+.modern-heading {
+  font-size: 6em;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  margin: 20px 0;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.modern-heading:hover {
+  color: #00ff95;
+}
+
+.favorite-song {
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #00ff95;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.flashes {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.flashes li {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+.flashes .success {
+  background-color: #00ff95;
+  color: #fff;
+}
+
+.flashes .error {
+  background-color: #00ff95;
+  color: #fff;
+}
+
+.favorites-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #00ff95;
+  border-radius: 30px;
+  color: #00ff95;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: none;
+}
+
+.favorites-button:hover {
+  background-color: #00ff95;
+  color: #fff;
+}
+
+.modern-song-heading {
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  margin: 20px 0;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.modern-song-heading:hover {
+  color: #00ff95;
+}

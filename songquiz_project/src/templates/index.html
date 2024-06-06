@@ -1,0 +1,50 @@
+{% extends "navbar.html" %}
+{% block content %}
+<h1 class="modern-heading">Music Quiz Generator!</h1>
+<form action="/" method="post" class="queryform">
+  <div class="querybox">
+    <input type="text" id="form" name="id" placeholder="Enter a word to search for" class="search-bar" />
+    <input type="submit" name="submit" id="button" value="Search" class="search-button" />
+  </div>
+  <div class="querybox">
+    <label class="radio">
+      <input type="submit" name="radio" value="Random(30)" style="display: none;" />
+      <span class="fake-radio">Random(30)</span>
+    </label>
+    <label class="radio">
+      <input type="submit" name="radio" value="animals" style="display: none;" />
+      <span class="fake-radio">Animals</span>
+    </label>
+    <label class="radio">
+      <input type="submit" name="radio" value="countries" style="display: none;" />
+      <span class="fake-radio">Countries</span>
+    </label>
+    <label class="radio">
+      <input type="submit" name="radio" value="cities" style="display: none;" />
+      <span class="fake-radio">Cities</span>
+    </label>
+    <label class="radio">
+      <input type="submit" name="radio" value="weather" style="display: none;" />
+      <span class="fake-radio">Weather</span>
+    </label>
+  </div>
+</form>
+<div class="cards">
+  {% if length > 0 %}
+    {% for i in range(0, length) %}
+    <a href="/song/{{ content[i][4] }}">
+      <div class="card">
+        <img src="/static/images/image.png" class="image4" />
+        <div class="container">
+          <h4><b>Title: {{ content[i][3] }}</b></h4>
+          <h5 class="card-text">Artist: {{ content[i][1] }}</h5>
+          <h5 class="card-text album-name">Album: {{ content[i][0] }}</h5>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  {% else %}
+    <p>No songs found with the entered lyrics.</p>
+  {% endif %}
+</div>
+{% endblock content %}

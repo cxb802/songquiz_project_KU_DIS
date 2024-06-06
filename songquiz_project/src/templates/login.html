@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/login.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    />
+    <title>Login</title>
+</head>
+<h1 class="modern-heading">Music Quiz Generator!</h1>
+<body>
+    <form action="/login" method="POST">
+        <div class="login">
+            <div class="login-screen">
+                <div class="app-title">
+                    <h1>Login</h1>
+                </div>
+                <div class="login-form">
+                    <div class="control-group">
+                        <input
+                            type="text"
+                            class="login-field"
+                            value=""
+                            placeholder="Username"
+                            name="username"
+                        />
+                    </div>
+                    <div class="control-group">
+                        <input
+                            type="password"
+                            class="login-field"
+                            value=""
+                            placeholder="Password"
+                            name="password"
+                        />
+                    </div>
+                    <input
+                        type="submit"
+                        value="Log in"
+                        class="btn btn-primary btn-large btn-block"
+                        name="login"
+                    />
+                </div>
+            </div>
+            <div class="create-account">
+                <a href="/createaccount" class="btn btn-secondary">New Account</a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
